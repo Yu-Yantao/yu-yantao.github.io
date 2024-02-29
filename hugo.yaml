@@ -1,6 +1,6 @@
 # 基础配置
 # 博客的URL
-baseURL: https://www.yuyantao.com
+baseURL: yuyantao.github.io
 # 语言
 languageCode: zh-cn
 # 主题名字
