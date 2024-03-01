@@ -11,7 +11,6 @@
     --toc-width: 300px;
 }
 
-
 .toc {
     margin: 0 2px 40px 2px;
     border: 1px solid var(--border);
@@ -224,7 +223,7 @@ body {
 
 .list {
     /* 添加!important表示覆盖默认的设置 */
-    background-image: url("../../img/background.png") !important;
+    background-color: snow;
     /* 照片不重复出现 */
     background-repeat: no-repeat;
     /* 照片大小 */
