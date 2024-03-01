@@ -40,7 +40,8 @@
     background: var(--entry);
     border-radius: var(--radius);
     transition: transform 0.1s;
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
+    box-shadow: 0 2px 4px rgb(5 10 15/5%),0 7px 13px -3px rgb(5 10 15/.3);
 }
 
 .post-entry:active {

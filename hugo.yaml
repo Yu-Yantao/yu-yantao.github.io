@@ -25,7 +25,7 @@ buildExpired: false
 googleAnalytics: UA-123-45 
 
 # 每页显示数量
-paginate: 10
+paginate: 7
 
 # 功能暂未知，未查询到相关介绍
 minify:
@@ -52,7 +52,7 @@ languages:
     languageCode: zh-CN
     # 切换语言的按钮的位置，ltr：左边，rtl：右边
     languageDirection: ltr
-    # contentDir: content/posts
+    # contentDir: content/categories
     weight: 1
     title: 俞延涛
     hasCJKLanguage: true 
@@ -68,21 +68,21 @@ languages:
           url: archives/
           weight: 2
           pre: <i class="fa-solid fa-box-archive"></i>
+#        - identifier: posts
+#          name: " 分类"
+#          url: posts
+#          weight: 3
+#          pre: <i class="fa-solid fa-layer-group"></i>
         - identifier: tags
-          name: 标签
+          name: " 标签"
           url: tags
-          weight: 3
+          weight: 4
           pre: <i class="fa-solid fa-tags"></i>
         - identifier: about
           name: " 关于"
           url: about
-          weight: 4
-          pre: <i class="fa-solid fa-user"></i>
-        - identifier: search
-          name: " 搜索"
-          url: search
           weight: 5
-          pre: <i class="fa-solid fa-magnifying-glass"></i>
+          pre: <i class="fa-solid fa-user"></i>
         
 outputs:
     home:
@@ -92,6 +92,7 @@ outputs:
 
 # 主题的配置，此处用的主题是PaperMod
 params:
+  about: true
   # SEO优化需要点配置 
   env: production
   # 博客作者
@@ -111,9 +112,11 @@ params:
   # 文章内部链接
   ShowPostNavLinks: true
   # 展示导航面包屑
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   # 显示复制按钮
   ShowCodeCopyButtons: true
+  # 分页信息
+  ShowPageNums: true
   # 隐藏页脚
   hideFooter: false 
   # 字数统计
@@ -175,12 +178,10 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: [ "title", "permalink", "summary" ]
-  # page:
-  #   library:
-  #     js:
-  #       - 
+
 # 分类
 taxonomies:
+  category: categories
   tag: tags
 
 # markdown解析器

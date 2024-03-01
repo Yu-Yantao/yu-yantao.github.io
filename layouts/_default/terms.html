@@ -9,8 +9,8 @@
     {{- $count := .Count }}
     {{- with $.Site.GetPage (printf "/%s/%s" $type $name) }}
     <li>
-        {{ $largestFontSize := 1.5 }}
-        {{ $smallestFontSize := 1 }}
+        {{ $largestFontSize := 2.5 }}
+        {{ $smallestFontSize := 1.5 }}
         {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
         {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
         {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
