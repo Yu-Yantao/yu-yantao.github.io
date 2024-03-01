@@ -4,7 +4,9 @@ baseURL: yuyantao.com
 # 语言
 languageCode: zh-cn
 # 主题名字
-theme: PaperMod 
+theme: PaperMod
+ignoreFiles:
+  - 'content/posts/Template'
 
 # 字符相关配置
 # 允许内联短码
@@ -33,7 +35,7 @@ minify:
 
 #浏览器链接显示方式
 permalinks: 
-  post: "/:title/"
+  post: "/:title"
 
 # 默认展示语言
 defaultContentLanguage: zh
@@ -102,7 +104,7 @@ params:
   # 背景切换开关
   disableThemeToggle: true
   # 时间格式化
-  DateFormat: "2006-01-02"
+  DateFormat: "2006-01-02 15:04:05"
   # 分享按钮
   ShowShareButtons: false
   # 预计阅读时间
