@@ -1,17 +1,13 @@
 ---
-title: ""
-layout: about
-date: 2021-11-06T14:57:28+08:00
+# 标题
+title: "关于"
+# 创建时间
+date: 2024-01-20T12:52:15+08:00
+# 更新时间
+lastmod: 2024-01-20T12:52:15+08:00
+# 隐藏基础信息
 hidemeta: true
-description: " "
-weight:
-slug: ""
-draft: false # 是否为草稿
-comments: true
-reward: false
-showToc: false # 显示目录
-TocOpen: false # 自动展开目录
-disableShare: true # 底部不显示分享栏
+# 展示导航面包屑
 showbreadcrumbs: false
 cover:
     image: ""
@@ -21,7 +17,7 @@ cover:
 ---
 <div class="custom-about">
     <div>
-        <img class="custom-profile" src="/img/profile.png" alt="图片加载失败">
+        <img class="custom-profile" src="https://www.yuyantao.com/img/profile.png" alt="图片加载失败">
     </div>
     <p class="custom-font">关于我</p>
     <span class="custom-heading-underline"></span>
