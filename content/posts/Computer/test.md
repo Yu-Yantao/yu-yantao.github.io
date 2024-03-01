@@ -1,12 +1,13 @@
 ---
-title: '测试'
+title: '测试Hugo'
 date: 2024-02-20T12:52:15+08:00
 lastmod: 2024-02-20T12:52:15+08:00
 author: ["俞延涛"] #作者
 tags: 
 - 标签1
 - 标签2
-summary: "描述11111" #描述
+summary: "概述" #描述
+description: "描述" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 draft: false # 是否为草稿
 # cover:

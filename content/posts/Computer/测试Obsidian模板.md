@@ -1,27 +1,19 @@
 ---
-title: '测试'
-date: 2023-02-20T12:52:15+08:00
-lastmod: 2023-02-20T12:52:15+08:00
-author: ["俞延涛"] #作者
+title: 模版
+date: 2024-03-01 20:14:25
+lastmod: 2024-03-01 20:14:25
+author:
+  - 俞延涛
+categories: 
 tags: 
-- 标签1
-- 标签2
-- 标签3
-- 标签4
-- 标签5
-- 标签6
-- 标签7
-- 标签8
-- 标签9
-- 标签10
-description: "描述11sdfgsdfgdsfgsdfgsdfgsd111" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
-draft: false # 是否为草稿
-# cover:
-#     image: "img/profile.pn" #图片路径：categories/tech/文章1/picture.png
-#     caption: "" #图片底部描述
-#     alt: ""
-#     relative: false
+description: 
+weight: 
+draft: false
+cover:
+  image: ""
+  caption: ""
+  alt: ""
+  relative:
 ---
 ### 个人简历模板
 

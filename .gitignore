@@ -2,3 +2,5 @@ public
 .hugo_build.lock
 .idea
 .DS_Store
+content/posts/.obsidian/*
+content/posts/Template/*
