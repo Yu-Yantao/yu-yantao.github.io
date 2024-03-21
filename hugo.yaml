@@ -7,7 +7,6 @@ languageCode: zh-cn
 theme: PaperMod
 ignoreFiles:
   - 'content/posts/Template'
-
 # 字符相关配置
 # 允许内联短码
 enableInlineShortcodes: true
