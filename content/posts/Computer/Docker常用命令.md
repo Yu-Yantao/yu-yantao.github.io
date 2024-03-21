@@ -1,7 +1,7 @@
 ---
 title: Docker常用命令
-date: 2023-08-06T16:51:47+0800
-lastmod: 2024-08-06T16:51:47+0800
+date: 2024-03-09T16:51:47+0800
+lastmod: 2024-03-09T16:51:47+0800
 author:
   - 俞延涛
 categories: 
@@ -97,7 +97,7 @@ sudo systemctl enable docker.service
 - 删除启动过的容器：docker rm 容器id
 	- docker rm -f $(docker ps -qa)：删除全部的
 - 启动交互式容器：docker run -d 镜像名
-	- 查看日志：docker logs \[option]
+	- 查看日志：docker logs \ [option]
 	- option
 	- -t：时间
 	- -f：最新的
