@@ -1,5 +1,5 @@
 ---
-title: 模版
+title: Docker常用命令
 date: 2024-03-09T16:51:47+0800
 lastmod: 2024-03-09T16:51:47+0800
 author:
@@ -17,17 +17,16 @@ cover:
   relative:
 ---
 # 1.Docker简介
----
 将应用和依赖环境进行封装到一个轻量级、可移植的容器中。一次封装，到处运行。
 
 # 2.三要素
----
+
 * 镜像：一个只读的模板。
 * 容器：可以运行一组或一个容器，是镜像的实例。
 * 仓库：集中存储镜像的地方。
 
 # 3.安装(CentOS8)
----
+
 1. 安装依赖
 ```bash
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -62,13 +61,13 @@ sudo systemctl enable docker.service
 ```
 
 # 4.帮助命令
----
+
 * docker version: 查看版本
 * docker info docker: 信息
 * docker --help:查看docker命令
 
 # 5.镜像命令
----
+
 * docker ps --format "{{.ID}}: {{.Names}}: {{.Command}}"
 * docker images [-a全部镜像] [-q只显示id] [—digest 显示摘要信息]：查看本地镜像
 * docker search 镜像名称：从dockerhub上找镜像
@@ -77,7 +76,7 @@ sudo systemctl enable docker.service
 * docker rmi -f $(docker images -qa)：全部删除
 
 # 6.容器命令
----
+
 * 新建并启动容器：docker run [options] images [command] [arg]
 	- options
 	- --name="容器名称"
