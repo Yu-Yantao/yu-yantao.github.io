@@ -69,22 +69,22 @@ sudo systemctl enable docker.service
 # 5.镜像命令
 
 * docker ps --format "{{.ID}}: {{.Names}}: {{.Command}}"
-* docker images [-a全部镜像] [-q只显示id] [—digest 显示摘要信息]：查看本地镜像
+* docker images \[-a全部镜像]  \[-q只显示id] \[—digest 显示摘要信息]：查看本地镜像
 * docker search 镜像名称：从dockerhub上找镜像
-* docker pull 镜像名称 [：版本号]：拉取镜像
-* docker rmi [-f 强制删除] 镜像名称 [：版本号]：删除本地镜像，可以删除多个，通过空格分隔
+* docker pull 镜像名称 \[：版本号]：拉取镜像
+* docker rmi \[-f 强制删除] 镜像名称 \[：版本号]：删除本地镜像，可以删除多个，通过空格分隔
 * docker rmi -f $(docker images -qa)：全部删除
 
 # 6.容器命令
 
-* 新建并启动容器：docker run [options] images [command] [arg]
+* 新建并启动容器：docker run \[options] images \[command] \[arg]
 	- options
 	- --name="容器名称"
 	- -d：后台运行容器，并返回容器ID，
 	- -i：以交互模式运行容器，配合t使用
 	- -t：生成一个伪输入窗口
 	- -p 主机端口:docker容器端口：指定端口映射
-- 查看运行的容器：docker ps [options]
+- 查看运行的容器：docker ps \[options]
 - options
 	- -n 2：最近运行过的容器
 - 退出容器
@@ -97,7 +97,7 @@ sudo systemctl enable docker.service
 - 删除启动过的容器：docker rm 容器id
 	- docker rm -f $(docker ps -qa)：删除全部的
 - 启动交互式容器：docker run -d 镜像名
-- 查看日志：docker logs [option]
+	- 查看日志：docker logs \ [option]
 	- option
 	- -t：时间
 	- -f：最新的
