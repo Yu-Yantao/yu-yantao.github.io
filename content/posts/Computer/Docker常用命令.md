@@ -3,18 +3,18 @@ title: Docker常用命令
 date: 2024-03-09T16:51:47+0800
 lastmod: 2024-03-09T16:51:47+0800
 author:
-  - 俞延涛
-categories: 
+	- 俞延涛
+categories:
 tags:
-  - Docker
+	- Docker
 description: Docker常用命令
-weight: 
+weight:
 draft: false
 cover:
-  image: ""
-  caption: ""
-  alt: ""
-  relative:
+	image: ""
+	caption: ""
+	alt: ""
+	relative:
 ---
 # 1.Docker简介
 将应用和依赖环境进行封装到一个轻量级、可移植的容器中。一次封装，到处运行。
@@ -107,4 +107,3 @@ sudo systemctl enable docker.service
 - 重新进入交互式容器：docker attache 容器id
 - 通过宿主机操作交互式容器：docker exec -t 容器id Linux命令
 - 容器数据传至宿主机：docker cp 容器id:容器内路径
-
