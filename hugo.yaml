@@ -55,7 +55,7 @@ languages:
     languageDirection: ltr
     # contentDir: content/categories
     weight: 1
-    title: 俞延涛
+    title: Tao's Blog
     hasCJKLanguage: true 
     menu:
       main:
