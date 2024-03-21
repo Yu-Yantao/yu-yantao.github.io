@@ -3,19 +3,18 @@ title: Docker常用命令
 date: 2024-03-09T16:51:47+0800
 lastmod: 2024-03-09T16:51:47+0800
 author:
-	- 俞延涛
+  - 俞延涛
 categories:
-	
 tags:
-	- Docker
+  - Docker
 description: Docker常用命令
 weight:
 draft: false
 cover:
-	image: ""
-	caption: ""
-	alt: ""
-	relative:
+  image: ""
+  caption: ""
+  alt: ""
+  relative:
 ---
 # 1.Docker简介
 将应用和依赖环境进行封装到一个轻量级、可移植的容器中。一次封装，到处运行。
