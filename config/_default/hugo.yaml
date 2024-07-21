@@ -1,0 +1,50 @@
+# 基础配置
+
+# 主题名称
+theme: blowfish
+
+# 域名
+baseURL: yuyantao.com
+
+# 默认语言
+defaultContentLanguage: en
+
+# 是否自动生成robot.txt文件，该文件的作用可自行了解
+enableRobotsTXT: true
+
+# 分页大小
+paginate: 10
+
+# 自动检测是否包含中文日文韩文，如果为false，在字符统计或者显示简介的时候会显示异常
+hasCJKLanguage: true
+
+# 构建配置
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# 启用Emoji标签
+enableEmoji: true
+
+# 谷歌分析
+# googleAnalytics: G-XXXXXXXXX
+
+# 分类方式
+taxonomies:
+  tag: tags
+
+# sitemap配置
+sitemap:
+  changefreq: daily
+  filename: sitemap.xml
+
+# 网站输出格式
+outputs:
+  home: [ HTML, RSS, JSON ]
+
+# 忽略的文体局
+ignoreFiles:
+  - content/template.md
+
+# summary长度
+summaryLength: 0

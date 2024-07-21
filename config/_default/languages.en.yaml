@@ -1,0 +1,35 @@
+# 此配置是主题配置，见官方文档 https://blowfish.page/zh-cn/docs/configuration/#%E8%AF%AD%E8%A8%80%E5%92%8Ci18n
+# 语言编码，必须与配置文件名相同
+languageCode: en
+# 切换语言展示的内容
+languageName: English
+# 加载顺序
+weight: 1
+# 网站标题，包括右上角名称和标签页名称
+title: Tao's Blog
+
+# 网站参数
+params:
+  # 切换语言展示的内容
+  displayName: English
+  # HTML中language的内容，有利于SEO
+  isoCode: en
+  # 日期格式
+  dateFormat: 2 January 2006
+  # HTML中关于网站的描述，有利于SEO
+  description: Yu Yantao's Blog
+  # 版权信息
+  copyright: ©&nbsp;{ year }&nbsp;&nbsp;Yu Yantao
+
+# 作者信息
+author:
+  # 姓名，中间展示区域
+  name: Yu Yantao
+  # 头像
+  image: img/profile.png
+  # 文章页面作者信息中的简介部分
+  bio: _Software Engineer_
+  # 姓名下方展示语
+  headline: _I'm a software engineer and based in China._
+
+

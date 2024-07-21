@@ -1,0 +1,24 @@
+main:
+  - name: Home
+    pageRef: /
+    weight: 1
+
+  - name: Blog
+    pageRef: /blog
+    weight: 2
+
+  - name: Tags
+    pageRef: /tags
+    weight: 3
+
+  - name: About
+    pageRef: about
+    weight: 4
+
+  - identifier: GitHub
+    pre: github
+    url: https://github.com/Yu-Yantao
+    weight: 5
+
+footer:
+  - none: none

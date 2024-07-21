@@ -1,0 +1,20 @@
+# markdown解析器
+markup:
+  # goldmark解析器设置
+  goldmark:
+    renderer:
+      # 转译html
+      unsafe: true
+
+# 代码高亮设置
+highlight:
+  codeFences: true
+  guessSyntax: true
+  style: catppuccin-latte
+  tabWidth: 4
+  noClasses: true
+
+# 目录设置
+tableOfContents:
+  startLevel: 2
+  endLevel: 4
