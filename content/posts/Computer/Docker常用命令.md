@@ -29,7 +29,7 @@ cover:
 
 1. 安装依赖
 ```bash
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2 
 ```
 2. 添加yum源
 ```bash
