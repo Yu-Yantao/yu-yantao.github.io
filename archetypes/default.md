@@ -1,15 +1,13 @@
-+++
+---
 title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
 author: Yu Yantao
 tags:
-- a
-- b
-- c
-description: ddd
-summary: sasdf
+- 
+description: 
+summary: 
 weight:
-slug: sss
+slug: 
 draft: false
-+++
+---
