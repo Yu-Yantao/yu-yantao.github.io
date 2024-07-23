@@ -18,3 +18,15 @@
     position: absolute;
     max-width: 200px;
 }
+
+@font-face {
+    font-family: font;
+    src: url('/fonts/AlimamaShuHeiTi-Bold.ttf');
+}
+
+body {
+    font-family: font, serif;
+}
+.active {
+    text-underline-offset: 6px;
+}
