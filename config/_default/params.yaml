@@ -61,6 +61,7 @@ article:
   showTaxonomies: true
   showWordCount: true
   showZenMode: true
+  showComments: true
 
 list:
   layoutBackgroundHeaderSpace: true
