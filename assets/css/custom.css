@@ -38,3 +38,15 @@ body {
 .active {
     text-underline-offset: 6px;
 }
+
+/*闪烁下划线*/
+.blinking {
+    animation: blinker 0.8s linear infinite;
+    display: inline-block;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
