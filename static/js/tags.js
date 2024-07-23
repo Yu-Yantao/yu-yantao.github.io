@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 选取所有文章标签
     let articleList = document.querySelectorAll('#blog-tags article');
-
+    articleList = [...articleList].sort(() => Math.random() - 0.5);
     // 遍历每个文章标签
     articleList.forEach((element, index) => {
         // 计算文章标签分布的角度

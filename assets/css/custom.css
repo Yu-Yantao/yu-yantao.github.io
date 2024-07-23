@@ -23,6 +23,13 @@
     max-width: 200px;
 }
 
+/* 小屏幕设备样式 */
+@media (max-width: 768px) {
+    .blog-tags {
+        padding-bottom: 100%; /* 增加展示区 */
+    }
+}
+
 /*引入字体样式*/
 @font-face {
     font-family: font;
