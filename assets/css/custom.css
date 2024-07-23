@@ -1,12 +1,15 @@
+/*首页导航栏字体*/
 .text-base {
     font-size: 1.25rem;
     line-height: 4rem;
 }
 
+/*标题与正文间距调整*/
 .prose :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
     margin-top: 0;
 }
 
+/*标签云容器*/
 .blog-tags {
     position: relative;
     padding-bottom: 35%;
@@ -14,19 +17,24 @@
     border-radius: 100%;
 }
 
+/*标签云内容*/
 .blog-tag {
     position: absolute;
     max-width: 200px;
 }
 
+/*引入字体样式*/
 @font-face {
     font-family: font;
     src: url('/fonts/AlimamaShuHeiTi-Bold.woff2');
 }
 
+/*字体应用全局*/
 body {
     font-family: font, serif;
 }
+
+/*首页导航激活时的下划线跳转*/
 .active {
     text-underline-offset: 6px;
 }
