@@ -3,11 +3,10 @@ title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
 author: Yu Yantao
-tags:
-- 
-description: 
-summary: 
+draft: false
 weight:
 slug: 
-draft: false
+tags: []
+summary: 
+description: 
 ---
