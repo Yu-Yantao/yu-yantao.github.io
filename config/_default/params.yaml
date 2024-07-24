@@ -58,7 +58,7 @@ article:
   showPagination: true
   showReadingTime: true
   showTableOfContents: true
-  showRelatedContent: true
+  showRelatedContent: false
   relatedContentLimit: 3
   showTaxonomies: true
   showWordCount: true
