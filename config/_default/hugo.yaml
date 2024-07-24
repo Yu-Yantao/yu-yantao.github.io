@@ -35,7 +35,7 @@ taxonomies:
 
 # sitemap配置
 sitemap:
-  changefreq: daily
+  changefreq: hour
   filename: sitemap.xml
 
 # 网站输出格式
