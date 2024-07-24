@@ -1,5 +1,5 @@
 ---
-title: Socket—网络通信的基石
+title: Socket-网络通信的基石
 date: 2024-07-24T18:08:56+08:00
 lastmod: 2024-07-24T18:08:56+08:00
 author: Yu Yantao
