@@ -5,7 +5,7 @@ lastmod: 2024-07-24T18:08:56+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: socket-wang-luo-tong-xin-de-ji-shi
+slug: socket-network-communication-the-basis
 tags: [Network]
 summary: 本文介绍主要Socket的基本概念及其作用。
 description: 本文介绍主要Socket的基本概念及其作用。
