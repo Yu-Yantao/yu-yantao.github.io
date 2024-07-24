@@ -42,9 +42,5 @@ sitemap:
 outputs:
   home: [ HTML, RSS, JSON ]
 
-# 忽略的文体局
-ignoreFiles:
-  - content/template.md
-
 # summary长度
 summaryLength: 0
