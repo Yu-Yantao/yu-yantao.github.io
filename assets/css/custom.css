@@ -4,11 +4,6 @@
     line-height: 4rem;
 }
 
-/*标题与正文间距调整*/
-.prose :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
-    margin-top: 0;
-}
-
 /*标签云容器*/
 .blog-tags {
     position: relative;
