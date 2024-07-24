@@ -20,7 +20,7 @@ showAuthorBottom: false
 ## About Me
 
 - _**Yu Yantao**_
-- _**Bachelor of Engineering**_
+- _**Backend Engineer**_
 - _**Graduated in 2022 from [Inner Mongolia Agricultural University](https://www.imau.edu.cn/)**_
 
 ---
@@ -28,6 +28,6 @@ showAuthorBottom: false
 ## About Site
 
 - _**Built with [Hugo](https://gohugo.io/)**_
-- _**Theme [Blowfish](https://blowfish.page/)**_
+- _**The template is [Blowfish](https://blowfish.page/)**_
 - _**Deployed on [GitHub Pages](https://pages.github.com/)**_
 
