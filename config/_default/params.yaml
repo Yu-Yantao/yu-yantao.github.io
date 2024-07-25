@@ -37,8 +37,7 @@ homepage:
   showRecentItems: 3
   showMoreLink: true
   showMoreLinkDest: /blog
-  cardView: true
-  cardViewScreenWidth: false
+  cardView: false
   layoutBackgroundBlur: true
 
 article:
@@ -71,7 +70,6 @@ list:
   showCards: true
   orderByWeight: true
   groupByYear: true
-  constrainItemsWidth: true
 
 sitemap:
   excludedKinds:
