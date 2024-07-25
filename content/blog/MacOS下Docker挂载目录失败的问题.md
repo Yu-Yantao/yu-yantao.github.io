@@ -13,7 +13,7 @@ description: 本文主要介绍MacOS下使用"docker run -v"命令挂载目录�
 
 ## 1.问题描述
 
-```bash
+```shell
 docker run --restart=unless-stopped -d --name mysql -v /opt/local/Docker/mysql/data/:/var/lib/mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=xxxx mysql
 ```
 

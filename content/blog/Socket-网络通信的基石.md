@@ -7,8 +7,8 @@ draft: false
 weight:
 slug: socket-network-communication-the-basis
 tags: [Network]
-summary: 本文介绍主要Socket的基本概念及其作用。
-description: 本文介绍主要Socket的基本概念及其作用。
+summary: 本文主要介绍Socket的基本概念及其作用。
+description: 本文主要介绍Socket的基本概念及其作用。
 ---
 
 ## 1.Socket 介绍
@@ -18,7 +18,7 @@ Socket 主要包含以下几部分：
 
 1. IP 地址
 2. 端口号
-3. 传输协议  
+3. 传输协议
 
 通过以上几个部分，使得进程可以在不同的计算机上进行网络通信。
 
@@ -26,7 +26,7 @@ Socket 主要包含以下几部分：
 
 通过上面的介绍，可以看出，Socket 就是一个连接点，用来将不同节点的计算机进程连接起来。
 
-通过一个例子来介绍 socket 的作用，想象一下向朋友邮局寄信的过程。
+通过一个例子来介绍 Socket 的作用，想象一下向朋友邮局寄信的过程。
 
 1. 将信封放入**邮局**，信封上写上目的地（相当于设置 IP 地址和端口号）
 2. 邮局发往目的地（建立连接并发送数据）
