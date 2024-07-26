@@ -52,3 +52,8 @@ body {
         opacity: 0;
     }
 }
+
+/*主体内容宽度限制*/
+.max-w-prose{
+    max-width: 80ch;
+}
