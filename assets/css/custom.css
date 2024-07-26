@@ -28,7 +28,7 @@
 /*引入字体样式*/
 @font-face {
     font-family: font;
-    src: url('/fonts/NotoSansSC-VariableFont_wght.ttf');
+    src: url('/fonts/NotoSansSC-VariableFont_wght.woff2');
 }
 
 /*字体应用全局*/
