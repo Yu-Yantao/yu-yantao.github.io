@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: false
 weight:
 slug: docker-install-common-app-commands-summary
-tags: [ Docker,Software Installation ]
+tags: [ Docker ]
 summary: 本文主要介绍Docker安装常见应用命令汇总。
 description: 本文主要介绍Docker安装常见应用命令汇总。
 ---
