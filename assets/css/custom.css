@@ -25,6 +25,17 @@
     }
 }
 
+/*引入字体样式*/
+@font-face {
+    font-family: font;
+    src: url('/fonts/NotoSansSC-VariableFont_wght.ttf');
+}
+
+/*字体应用全局*/
+body {
+    font-family: font, serif;
+}
+
 /*首页导航激活时的下划线跳转*/
 .active {
     text-underline-offset: 6px;
