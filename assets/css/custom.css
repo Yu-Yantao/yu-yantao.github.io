@@ -6,22 +6,25 @@
 
 /*标签云容器*/
 .blog-tags {
-    position: relative;
-    padding-bottom: 35%;
-    margin: 0 auto;
-    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 /*标签云内容*/
 .blog-tag {
-    position: absolute;
-    max-width: 200px;
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    padding-left: 7rem;
+    padding-right: 7rem;
 }
 
 /* 小屏幕设备样式 */
 @media (max-width: 768px) {
-    .blog-tags {
-        padding-bottom: 100%; /* 增加展示区 */
+    .blog-tag {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -54,6 +57,6 @@ body {
 }
 
 /*主体内容宽度限制*/
-.max-w-prose{
+.max-w-prose {
     max-width: 80ch;
 }

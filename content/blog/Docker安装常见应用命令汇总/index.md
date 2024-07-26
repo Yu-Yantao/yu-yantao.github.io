@@ -7,8 +7,8 @@ draft: false
 weight:
 slug: docker-install-common-app-commands-summary
 tags: [ Docker ]
-summary: 本文主要介绍Docker安装常见应用的命令汇总。
-description: 本文主要介绍Docker安装常见应用的命令汇总。
+summary: 本文主要介绍Docker安装常见应用命令汇总。
+description: 本文主要介绍Docker安装常见应用命令汇总。
 ---
 
 > 说明: 本文的安装命令是基于 MacOS 的，我个人习惯放在 opt 目录下，因为 homebrew 的安装位置是 opt ，依个人习惯，自行选择。

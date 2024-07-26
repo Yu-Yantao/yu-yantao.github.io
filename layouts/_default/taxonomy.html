@@ -48,7 +48,7 @@
 
   {{ else }}
   <script src="{{ "/js/tags.js" }}"></script>
-  <section class="flex -mx-2 blog-tags" id="blog-tags">
+  <section class="flex flex-wrap -mx-2 overflow-hidden blog-tags">
     {{ range .Data.Terms }}
       {{ partial "term-link/text.html" . }}
     {{ end }}

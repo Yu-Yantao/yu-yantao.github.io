@@ -1,29 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 获取椭圆容器
-    const blog_tags = document.getElementById('blog-tags');
+    // 获取容器
+    const tagsContainer = document.querySelector('.blog-tags');
 
-    // 获取椭圆的实际宽度和高度
-    const ellipseWidth = blog_tags.offsetWidth;
-    const ellipseHeight = blog_tags.offsetHeight;
-
-    // 选取所有文章标签
-    let articleList = document.querySelectorAll('#blog-tags article');
-    articleList = [...articleList].sort(() => Math.random() - 0.5);
+    // 选取所有标签
+    let tagList = Array.from(document.querySelectorAll('.blog-tags article'));
+    // 博客数量最多的标签
+    const maxCount = Array.from(tagList).reduce((max, article) => {
+        const spans = article.querySelectorAll('span');
+        const count = parseInt(spans[1].textContent.trim(), 10);
+        return Math.max(max, count);
+    }, 1)
+    // 字体变化范围[1, 2]rem
+    let per = 1 / maxCount;
     // 遍历每个文章标签
-    articleList.forEach((element, index) => {
-        // 计算文章标签分布的角度
-        const angle = (index / articleList.length) * 2 * Math.PI;
+    for (let i = tagList.length - 1; i > 0; i--) {
+        // 打乱顺序
+        const j = Math.floor(Math.random() * (i + 1));
+        [tagList[i], tagList[j]] = [tagList[j], tagList[i]];
+        // 设置字体大小
+        const spans = tagList[i].querySelectorAll('span');
+        const secondSpan = spans[1];
+        const countText = secondSpan.textContent.trim();
+        const count = parseInt(countText, 10)
+        tagList[i].style.fontSize = `${1 + per * count}rem`;
+        tagList[i].style.lineHeight = `4rem`;
+    }
+    // 重新添加标签
+    tagsContainer.innerHTML = '';
+    tagList.forEach(tag => {
+        tagsContainer.appendChild(tag)
+    })
 
-        // 随机生成横向和纵向半径
-        const radiusX = (ellipseWidth / 2) * 0.8 * (Math.random() * 0.5 + 0.5);
-        const radiusY = (ellipseHeight / 2) * 0.8 * (Math.random() * 0.5 + 0.5);
-
-        // 根据角度和半径计算文章标签的位置
-        const x = ellipseWidth / 2 + radiusX * Math.cos(angle);
-        const y = ellipseHeight / 2 + radiusY * Math.sin(angle);
-
-        // 设置文章标签的位置，确保其不会超出椭圆边界
-        element.style.left = `${x - element.offsetWidth / 2}px`;
-        element.style.top = `${y - element.offsetHeight / 2}px`;
-    });
 });
