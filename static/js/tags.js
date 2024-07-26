@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 字体变化范围[1, 2]rem
     let per = 1 / maxCount;
     // 遍历每个文章标签
-    for (let i = tagList.length - 1; i > 0; i--) {
+    for (let i = tagList.length - 1; i >= 0; i--) {
         // 打乱顺序
         const j = Math.floor(Math.random() * (i + 1));
         [tagList[i], tagList[j]] = [tagList[j], tagList[i]];
