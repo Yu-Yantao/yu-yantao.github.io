@@ -39,7 +39,7 @@ body {
     font-family: font, serif;
 }
 
-/*首页导航激活时的下划线跳转*/
+/*首页导航激活时与下划线的间距*/
 .active {
     text-underline-offset: 6px;
 }
@@ -59,4 +59,9 @@ body {
 /*主体内容宽度限制*/
 .max-w-prose {
     max-width: 80ch;
+}
+
+/*鼠标悬停下划线偏移量*/
+.hover\:underline-offset-2:hover {
+    text-underline-offset:6px
 }
