@@ -3,7 +3,7 @@ title: 博海拾贝
 date: 2024-08-02T15:53:14+08:00
 lastmod: 2024-08-02T15:53:14+08:00
 author: Yu Yantao
-draft: false
+draft: true
 weight: 1
 slug: the-blogosphere-is-brightest-stars
 tags: [ ]
