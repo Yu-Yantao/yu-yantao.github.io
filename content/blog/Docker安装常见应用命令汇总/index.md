@@ -117,7 +117,9 @@ docker run --name postgres \
 ```
 
 ## ELK
+
 ### ES
+
 ```shell
 # 1.拉取镜像
 docker pull elasticsearch:8.6.0
@@ -163,6 +165,7 @@ elasticsearch:8.6.0
 ```
 
 ### Kibana
+
 ```shell
 # 1.拉取镜像
 docker pull kibana:8.6.0
@@ -180,7 +183,9 @@ docker run -d \
 -p:5601:5601 \
 kibana:8.6.0
 ```
+
 配置文件
+
 ```text
 server.name: kibana
 server.host: "0.0.0.0"
@@ -195,6 +200,7 @@ i18n.locale: zh-CN
 ```
 
 ### Logstash
+
 ```shell
 # 1.拉取镜像
 docker pull logstash:8.6.0
@@ -255,6 +261,7 @@ docker restart logstash
 ```
 
 ## MongoDB
+
 ```shell
 # 1.拉取镜像
 docker pull mongo
@@ -274,6 +281,7 @@ db.createUser( {user: "root",pwd: "yyt0609",roles: [ { role: "root", db: "admin"
 ```
 
 ## RabbitMQ
+
 ```shell
 # 1.拉取镜像
 docker pull rabbitmq:management
@@ -284,6 +292,7 @@ docker run --name rabbitmq -d -p 15672:15672 -p 5672:5672 rabbitmq:management
 ```
 
 ## Nginx
+
 ```shell
 # 1.拉取镜像
 docker pull nginx
@@ -308,4 +317,36 @@ docker run -d \
 -v /opt/local/Docker/nginx/html:/usr/share/nginx/html \
 -v /opt/local/Docker/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
 -v /opt/local/Docker/nginx/logs:/var/log/nginx nginx
+```
+
+## Etcd
+
+```shell
+# 1.拉取镜像
+docker pull etcd
+
+# 2.创建数据目录和配置文件
+mkdir -p /opt/local/Docker/etcd/data
+mkdir -p /opt/local/Docker/etcd/config/
+
+# 3.配置文件
+vim /opt/local/Docker/etcd/config/etcd.conf
+
+
+# 4.启动容器
+docker run -d \
+  --name etcd \
+  -p 2379:2379 \
+  -p 2380:2380 \
+  -v /opt/local/Docker/etcd/data:/bitnami/etcd \
+  -v /opt/local/Docker/etcd/config/etcd.conf:/opt/bitnami/etcd/conf/etcd.conf \
+  --env ALLOW_NONE_AUTHENTICATION=yes \
+  bitnami/etcd:latest
+```
+etcd.conf
+```text
+name: "etcd-node"
+data-dir: "/etcd-data"
+listen-client-urls: "http://0.0.0.0:2379"
+advertise-client-urls: "http://localhost:2379"                 
 ```
