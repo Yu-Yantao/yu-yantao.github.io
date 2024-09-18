@@ -12,7 +12,7 @@ highlight:
   guessSyntax: true
   style: catppuccin-latte
   tabWidth: 4
-  noClasses: true
+  noClasses: false
 
 # 目录设置
 tableOfContents:

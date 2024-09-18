@@ -17,7 +17,7 @@ highlightCurrentMenuArea: true
 
 smartTOC: true
 
-smartTOCHideUnfocusedChildren: true
+smartTOCHideUnfocusedChildren: false
 
 env: production
 
