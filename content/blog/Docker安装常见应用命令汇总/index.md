@@ -11,6 +11,8 @@ summary: 本文主要介绍Docker安装常见应用命令汇总。
 description: 本文主要介绍Docker安装常见应用命令汇总。
 ---
 
+> 如果文章中有不准确的地方，欢迎留言指正。
+
 > 说明: 本文的安装命令是基于 MacOS 的，我个人习惯放在 opt 目录下，因为 homebrew 的安装位置是 opt ，依个人习惯，自行选择。
 
 ## MySQL
@@ -343,7 +345,9 @@ docker run -d \
   --env ALLOW_NONE_AUTHENTICATION=yes \
   bitnami/etcd:latest
 ```
+
 etcd.conf
+
 ```text
 name: "etcd-node"
 data-dir: "/etcd-data"
