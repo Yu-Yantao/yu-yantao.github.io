@@ -1,14 +1,14 @@
 ---
-title: 博海拾贝
+title: 进步的阶梯
 date: 2024-08-02T15:53:14+08:00
 lastmod: 2024-08-02T15:53:14+08:00
 author: Yu Yantao
 draft: true
 weight: 1
-slug: the-blogosphere-is-brightest-stars
+slug: 2024-08-02
 tags: [ ]
-summary: 那些让我受益良多的博客。
-description: 那些让我受益良多的博客。
+summary: 记录一些让我受益匪浅的博客。
+description: 记录一些让我受益匪浅的博客。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。

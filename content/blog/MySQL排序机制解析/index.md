@@ -5,7 +5,7 @@ lastmod: 2024-07-30T13:02:34+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: mysql-sort-mechanism-analysis
+slug: 2024-07-30
 tags: [ MySQL ]
 summary: 本文主要介绍MySQL的两种排序机制。
 description: 本文主要介绍MySQL的两种排序机制。

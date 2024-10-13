@@ -1,11 +1,11 @@
 ---
 title: MacOS下Docker挂载目录失败的问题
-date: 2024-07-24T18:46:57+08:00
-lastmod: 2024-07-24T18:46:57+08:00
+date: 2024-07-26T18:46:57+08:00
+lastmod: 2024-07-26T18:46:57+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: macos-docker-mount-directory-failed
+slug: 2024-07-26
 tags: [ MacOS, Docker ]
 summary: 本文主要介绍MacOS下使用"docker run -v"命令挂载目录后不生效的原因及解决方案。
 description: 本文主要介绍MacOS下使用"docker run -v"命令挂载目录后不生效的原因及解决方案。

@@ -5,7 +5,7 @@ lastmod: 2024-07-18T11:36:15+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: poi-tl-export-word
+slug: 2024-07-18
 tags: [ Java ]
 summary: 使用Poi-tl导出Word
 description: 使用Poi-tl导出Word

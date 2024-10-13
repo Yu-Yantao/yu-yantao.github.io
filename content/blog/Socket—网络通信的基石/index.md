@@ -5,7 +5,7 @@ lastmod: 2024-07-24T18:08:56+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: socket-network-communication-the-basis
+slug: 2024-07-24
 tags: [ Network ]
 summary: 本文主要介绍Socket的基本概念及其作用。
 description: 本文主要介绍Socket的基本概念及其作用。

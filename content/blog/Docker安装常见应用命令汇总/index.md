@@ -5,7 +5,7 @@ lastmod: 2024-07-25T17:02:51+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: docker-install-common-app-commands-summary
+slug: 2024-07-25
 tags: [ Docker ]
 summary: 本文主要介绍Docker安装常见应用命令汇总。
 description: 本文主要介绍Docker安装常见应用命令汇总。
