@@ -5,7 +5,7 @@ lastmod: {{ .Date }}
 author: Yu Yantao
 draft: false
 weight:
-slug: 
+slug: {{ time.Now.Format "2006-01-02" }}
 tags: []
 summary: 
 description: 
