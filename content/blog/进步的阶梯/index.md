@@ -7,8 +7,8 @@ draft: false
 weight: 1
 slug: 2024-08-02
 tags: [ Notes ]
-summary: 记录一些让我受益匪浅的博客。
-description: 记录一些让我受益匪浅的博客。
+summary: 记录一些不错的文章。
+description: 记录一些不错的文章。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。

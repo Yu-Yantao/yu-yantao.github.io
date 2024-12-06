@@ -7,8 +7,8 @@ draft: false
 weight:
 slug: 2024-10-25
 tags: [ MySQL ]
-summary: 本文主要介绍MySQL中使用varchar类型时，隐式转换导致查询出不匹配的数据
-description: 
+summary: 本文主要介绍MySQL中使用varchar类型时，隐式转换导致查询出不匹配的数据。
+description: 本文主要介绍MySQL中使用varchar类型时，隐式转换导致查询出不匹配的数据。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。
