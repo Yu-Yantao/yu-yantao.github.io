@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: false
 weight:
 slug: 2024-12-20
-tags: [ ]
+tags: [ Java ]
 summary: MyBatis SQL日志转换为可执行SQL
 description: MyBatis SQL日志转换为可执行SQL
 ---
