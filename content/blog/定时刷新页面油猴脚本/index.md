@@ -38,10 +38,15 @@ description: 定时刷新页面的油猴脚本，适用于一些需要定时刷�
     'use strict';
 
     // 设置刷新间隔时间，单位为毫秒
-    const refreshInterval = 1000 * 60 * 90;
+    const refreshInterval = 1000 * 60 * 5;
 
     // 设置提示时间，单位为毫秒
     const countdownDuration = 1000 * 10;
+
+    const refreshCountElement = document.createElement('div');
+
+    // 从 localStorage 获取刷新次数，如果没有则初始化为 0
+    let refreshCount = parseInt(localStorage.getItem('refreshCount')) || 0;
 
     // 显示倒计时的函数
     function showCountdown() {
@@ -63,7 +68,7 @@ description: 定时刷新页面的油猴脚本，适用于一些需要定时刷�
         let countdown = countdownDuration / 1000;
         countdownElement.textContent = `页面将在 ${countdown} 秒后刷新。点击此处取消刷新。`;
 
-        // 倒计时结束，刷新页面 
+        // 倒计时结束，刷新页面
         const refreshTimer = setTimeout(function () {
             countdownElement.remove();
             window.location.reload();
@@ -88,13 +93,44 @@ description: 定时刷新页面的油猴脚本，适用于一些需要定时刷�
         });
     }
 
+    // 更新刷新次数
+    function updateRefreshCount() {
+        refreshCount++;
+        localStorage.setItem('refreshCount', refreshCount);
+        refreshCountElement.textContent = `刷新次数: ${refreshCount}`;
+    }
+
+    // 显示刷新次数的函数
+    function showRefreshCount() {
+        refreshCountElement.style.position = 'fixed';
+        refreshCountElement.style.top = '0';
+        refreshCountElement.style.left = '0';
+        refreshCountElement.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+        refreshCountElement.style.color = 'white';
+        refreshCountElement.style.padding = '10px';
+        refreshCountElement.style.borderRadius = '0 0 5px 0';
+        refreshCountElement.style.zIndex = '10001';
+        refreshCountElement.style.textAlign = 'left';
+
+        document.body.appendChild(refreshCountElement);
+
+        // 初始更新刷新次数
+        updateRefreshCount();
+
+        // 监听页面加载事件以更新刷新次数
+        window.addEventListener('load', updateRefreshCount);
+    }
+
     // 启动刷新周期的函数
     // refreshInterval - countdownDuration，到这个时间点，显示刷新提示
     function startRefreshCycle() {
         setTimeout(showCountdown, refreshInterval - countdownDuration);
     }
 
-    // 在页面加载后启动刷新周期
-    window.addEventListener('load', startRefreshCycle);
+    // 在页面加载后启动刷新周期和显示刷新次数
+    window.addEventListener('load', function () {
+        startRefreshCycle();
+        showRefreshCount();
+    });
 })();
 ```
