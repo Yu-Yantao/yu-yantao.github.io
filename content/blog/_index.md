@@ -1,4 +1,6 @@
 ---
 title: "Blog"
-hidemeta: true 
+hidemeta: true
+summary: Blog summary
+description: Blog description
 ---

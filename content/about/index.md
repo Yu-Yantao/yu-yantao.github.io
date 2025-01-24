@@ -3,8 +3,8 @@ title: About
 date: 2024-07-23T16:01:19+08:00
 lastmod: 2024-07-23T16:01:19+08:00
 author: Yu Yantao
-description:
-summary:
+description: About me description
+summary: About me summary
 weight:
 slug:
 draft: false

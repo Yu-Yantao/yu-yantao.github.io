@@ -6,7 +6,7 @@ languageName: English
 # 加载顺序
 weight: 1
 # 网站标题，包括右上角名称和标签页名称
-title: Yu Yantao
+title: Tao's Blog
 
 # 网站参数
 params:
@@ -17,7 +17,7 @@ params:
   # 日期格式
   dateFormat: 2 January 2006
   # HTML中关于网站的描述，有利于SEO
-  description: Yu Yantao's Blog
+  description: Hi There, this is Yu Yantao's Blog.
   # 版权信息
   copyright: ©&nbsp;{ year }&nbsp;&nbsp;Yu Yantao
 

@@ -1,5 +1,6 @@
 ---
 title: "Tags"
 layout: tags
-summary: tags
+summary: Tags summary
+description: Tags description
 ---
