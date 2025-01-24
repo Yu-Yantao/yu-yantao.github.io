@@ -20,16 +20,15 @@ params:
   description: Hi There, this is Yu Yantao's Blog.
   # 版权信息
   copyright: ©&nbsp;{ year }&nbsp;&nbsp;Yu Yantao
-
-# 作者信息
-author:
-  # 姓名，中间展示区域
-  name:  Yu Yantao
-  # 头像
-  image: img/profile.png
-  # 文章页面作者信息中的简介部分
-  bio: _Software Engineer_
-  # 姓名下方展示语
-  headline: Hi &nbsp;There, &nbsp;Welcome &nbsp;to &nbsp;my &nbsp;home
+  # 作者信息
+  author:
+    # 姓名，中间展示区域
+    name:  Yu Yantao
+    # 头像
+    image: img/profile.png
+    # 文章页面作者信息中的简介部分
+    bio: _Software Engineer_
+    # 姓名下方展示语
+    headline: Hi &nbsp;There, &nbsp;Welcome &nbsp;to &nbsp;my &nbsp;home
 
 
