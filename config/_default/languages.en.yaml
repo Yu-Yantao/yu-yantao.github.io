@@ -6,7 +6,7 @@ languageName: English
 # 加载顺序
 weight: 1
 # 网站标题，包括右上角名称和标签页名称
-title: Tao's Blog
+title: Yu Yantao
 
 # 网站参数
 params:
@@ -24,7 +24,7 @@ params:
 # 作者信息
 author:
   # 姓名，中间展示区域
-  name:  ' '
+  name:  Yu Yantao
   # 头像
   image: img/profile.png
   # 文章页面作者信息中的简介部分

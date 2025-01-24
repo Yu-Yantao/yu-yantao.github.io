@@ -71,7 +71,7 @@ list:
   orderByWeight: true
   groupByYear: true
 
-robots: all
+robots: index,all
 
 sitemap:
   excludedKinds:
