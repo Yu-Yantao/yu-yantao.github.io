@@ -71,6 +71,8 @@ list:
   orderByWeight: true
   groupByYear: true
 
+robots: all
+
 sitemap:
   excludedKinds:
     - taxonomy
