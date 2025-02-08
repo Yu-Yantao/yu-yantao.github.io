@@ -3,7 +3,7 @@ title: 使用Prometheus+Grafana监控MySQL
 date: 2025-02-06T10:03:44+08:00
 lastmod: 2025-02-06T10:03:44+08:00
 author: Yu Yantao
-draft: false
+draft: true
 weight:
 slug: 2025-02-06
 tags: [ MySQL ]
