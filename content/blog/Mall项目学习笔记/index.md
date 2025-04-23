@@ -1,5 +1,5 @@
 ---
-title: Mall项目学习笔记
+title: Mall 项目学习笔记
 date: 2025-04-23T16:25:06+08:00
 lastmod: 2025-04-23T16:25:06+08:00
 author: Yu Yantao
@@ -7,13 +7,13 @@ draft: false
 weight:
 slug: 2025-04-23
 tags: [ Notes ]
-summary: Mall项目学习笔记，项目地址 https://github.com/macrozheng/mall-swarm
-description: Mall项目学习笔记，项目地址 https://github.com/macrozheng/mall-swarm
+summary: Mall 项目学习笔记，项目地址 https://github.com/macrozheng/mall-swarm
+description: Mall 项目学习笔记，项目地址 https://github.com/macrozheng/mall-swarm
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。
 
-## #.业务场景解决方案
+## #.电商业务场景解决方案
 
 ### 1.订单到期关闭
 
