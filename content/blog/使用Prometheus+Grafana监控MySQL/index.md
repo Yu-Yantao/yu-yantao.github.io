@@ -32,10 +32,13 @@ description: 本文主要介绍如何使用Prometheus+Grafana监控MySQL各项�
 以上两种安装方式，选择合适的即可，我这里选择的是 Docker 安装。
 
 1. 创建网络
+
    ```shell
    docker network create my-network
    ```
+
 2. 配置文件
+
    ```shell
 
    # 创建目录
@@ -51,7 +54,9 @@ description: 本文主要介绍如何使用Prometheus+Grafana监控MySQL各项�
       static_configs:
          - targets: [ 'localhost:9090' ]
    ```
+
 3. 启动容器
+
    ```shell
    docker run -d \
        -p 9090:9090 \
@@ -60,6 +65,7 @@ description: 本文主要介绍如何使用Prometheus+Grafana监控MySQL各项�
        --network my-network \
        prom/prometheus
    ```
+
 4. 访问[http://localhost:9090](http://localhost:9090)
    ![Prometheus.png](img/Prometheus.png)
 5. 查看本机数据，点击上图中的 Target health
@@ -78,6 +84,7 @@ Prometheus 提供了多个 Exporter，用于收集不同的指标数据，MySQL-
 我这里选择的是Docker安装。
 
 1. 配置文件
+
    ```shell
    # 创建目录
    mkdir -p /opt/local/Docker/mysql-exporter
@@ -93,7 +100,9 @@ Prometheus 提供了多个 Exporter，用于收集不同的指标数据，MySQL-
    password = your_mysql_password
 
    ```
+
 2. 启动容器
+
    ```shell
    docker run -d \
    -p 9104:9104 \
@@ -104,6 +113,7 @@ Prometheus 提供了多个 Exporter，用于收集不同的指标数据，MySQL-
    ```
 
 3. 修改 Prometheus 配置文件，添加如下内容：
+
    ```shell
    vim /opt/local/Docker/prometheus/config/prometheus.yml
    # 配置文件
@@ -121,6 +131,7 @@ Prometheus 提供了多个 Exporter，用于收集不同的指标数据，MySQL-
          # 注意此处
          - targets: ['mysql-exporter:9104']
    ```
+
 4. 查看 MySQL 信息
 
    [http://localhost:9104/metrics](http://localhost:9104/metrics)
@@ -145,9 +156,11 @@ Prometheus 提供了多个 Exporter，用于收集不同的指标数据，MySQL-
 以上两种安装方式，选择合适的即可，我这里选择的是 Docker 安装。
 
 1. 拉取镜像并启动容器
+
    ```shell
    docker run -d -p 3000:3000 --name grafana --network my-network -v /opt/local/Docker/grafana:/var/lib/grafana grafana/grafana
    ```
+
 2. 访问[http://localhost:3000](http://localhost:3000)，使用默认用户名 admin，密码 admin，第一次登录时会提示修改密码，修改后登录即可。
    ![GrafanaIndex.png](img/GrafanaIndex.png)
 3. 添加数据源，不通版本页面添加数据源的方式不同，如果找不到可以在上方搜索Data sources

@@ -16,6 +16,7 @@ description:
 ## 删除头像下的标题
 
 1. layouts/partials/home/background.html
+
     ```html
     <h1 class="mb-2 text-4xl font-extrabold text-neutral-800 dark:text-neutral-200">
         {{ .Site.Params.Author.name | default .Site.Title }}
@@ -25,6 +26,7 @@ description:
 ## 动态 Tags
 
 1. 修改文件 layouts/_default/terms.html
+
     ```html
     <!--添加 blog-tags 类-->
     <section class="flex flex-wrap max-w-prose -mx-2 overflow-hidden blog-tags">
@@ -33,7 +35,9 @@ description:
         {{ end }}
     </section>
     ```
+
 2. 修改文件 layouts/partials/term-link/text.html
+
     ```html
     <!--添加 blog-tag 类-->
     <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 blog-tag">
@@ -42,6 +46,7 @@ description:
 ## 开启评论
 
 1. 新建文件 layouts/partials/comments.html
+
     ```html
     <script src="https://giscus.app/client.js"
             data-repo="Yu-Yantao/yu-yantao.github.io"
