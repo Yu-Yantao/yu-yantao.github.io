@@ -23,6 +23,16 @@ description:
     </h1>
     ```
 
+## 打字机效果
+
+1. layouts/partials/home/background.html
+   ```html
+   <h2 class="mt-0 mb-0 text-xl text-neutral-800 dark:text-neutral-300">
+                   <em>{{ . | markdownify }}
+                       <span class="blinking">__</span></em>
+               </h2>
+   ```
+
 ## 动态 Tags
 
 1. 修改文件 layouts/_default/terms.html

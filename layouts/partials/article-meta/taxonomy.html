@@ -21,16 +21,15 @@
     {{ $meta.Add "partials" (slice (partial "meta/likes.html" .)) }}
   {{ end }}
 
-{{ if and (eq $scope "single") (.Params.showLikes | default (.Site.Params.taxonomy.showLikes | default false)) }}
-{{ $meta.Add "partials" (slice (partial "meta/likes_button.html" .)) }}
-{{ end }}
-
-
-<div class="flex flex-row flex-wrap items-center">
-  {{/* Output partials */}}
-  {{ with ($meta.Get "partials") }}
-  {{ delimit . "<span class=\"px-2 text-primary-500\">&middot;</span>" | safeHTML}}
+  {{ if and (eq $scope "single") (.Params.showLikes | default (.Site.Params.taxonomy.showLikes | default false)) }}
+    {{ $meta.Add "partials" (slice (partial "meta/likes_button.html" .)) }}
   {{ end }}
-</div>
 
+
+  <div class="flex flex-row flex-wrap items-center">
+    {{/* Output partials */}}
+    {{ with ($meta.Get "partials") }}
+      {{ delimit . "<span class=\"px-2 text-primary-500\">&middot;</span>" | safeHTML }}
+    {{ end }}
+  </div>
 {{ end }}
