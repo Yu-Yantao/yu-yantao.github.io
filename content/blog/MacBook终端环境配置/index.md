@@ -17,7 +17,7 @@ description: MacBook 终端环境搭建记录。
 
 ### 安装
 
-```bash
+```shell
 brew install --cask kitty
 ```
 
@@ -25,7 +25,7 @@ brew install --cask kitty
 
 配置文件路径：`~/.config/kitty/kitty.conf`
 
-```conf
+```text
 font_family      font-maple-mono-nl-nf-cn
 font_size        14.0
 
@@ -87,13 +87,13 @@ kitty +kitten themes
 
 先安装 Oh My Zsh：
 
-```bash
+```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 安装第三方插件：
 
-```bash
+```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
@@ -120,7 +120,7 @@ eval "$(starship init zsh)"
 
 加载配置
 
-```bash
+```shell
 source ~/.zshrc
 ```
 
@@ -128,7 +128,7 @@ source ~/.zshrc
 
 ### 安装
 
-```bash
+```shell
 brew install starship
 ```
 
@@ -139,6 +139,7 @@ brew install starship
 ```shell
 starship preset pastel-powerline -o ~/.config/starship.toml
 ```
-
+主题预览
 ![img.png](pastel-powerline.png)
+
 配置文件路径：`~/.config/starship.toml`
