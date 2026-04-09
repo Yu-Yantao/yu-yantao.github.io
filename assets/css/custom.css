@@ -65,3 +65,157 @@ body {
 .hover\:underline-offset-2:hover {
     text-underline-offset:6px
 }
+
+/* 代码块 */
+html:not(.dark) {
+    --codeblock-surface: #ffffff;
+    --codeblock-surface-soft: #f8fafc;
+    --codeblock-border: rgba(148, 163, 184, 0.22);
+    --codeblock-text: #334155;
+    --codeblock-muted: #64748b;
+    --codeblock-shadow: 0 18px 30px -28px rgba(15, 23, 42, 0.28);
+    --codeblock-label-bg: #f8fafc;
+    --codeblock-label-border: rgba(148, 163, 184, 0.18);
+    --codeblock-copy-bg: rgba(248, 250, 252, 0.96);
+    --codeblock-copy-hover: #f1f5f9;
+    --codeblock-line-highlight: rgba(226, 232, 240, 0.52);
+}
+
+html:not(.dark) .highlight-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--codeblock-border);
+    border-radius: 1rem;
+    background: var(--codeblock-surface);
+    box-shadow: var(--codeblock-shadow);
+}
+
+html:not(.dark) .highlight-wrapper::before {
+    content: attr(data-lang-label);
+    position: absolute;
+    top: 0.85rem;
+    left: 1rem;
+    z-index: 2;
+    padding: 0.28rem 0.56rem;
+    border: 1px solid var(--codeblock-label-border);
+    border-radius: 999px;
+    background: var(--codeblock-label-bg);
+    color: var(--codeblock-muted);
+    font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+html:not(.dark) .highlight-wrapper .highlight,
+html:not(.dark) .highlight-wrapper .highlight pre,
+html:not(.dark) .highlight-wrapper .highlight .chroma,
+html:not(.dark) .highlight-wrapper .highlight .lntable {
+    background: transparent;
+}
+
+html:not(.dark) .highlight-wrapper:not(:has(.codeblock-title)) .highlight pre {
+    padding: 2.8rem 1.15rem 1.15rem;
+}
+
+html:not(.dark) .highlight-wrapper:has(.codeblock-title)::before {
+    top: 0.72rem;
+}
+
+html:not(.dark) .codeblock-title {
+    padding: 0.72rem 5.4rem 0.6rem 5.15rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.88);
+    background: var(--codeblock-surface-soft);
+    color: var(--codeblock-muted);
+    font-size: 0.84rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+html:not(.dark) .highlight-wrapper .highlight pre {
+    padding: 1.1rem 1.15rem 1.15rem;
+}
+
+html:not(.dark) .highlight-wrapper .highlight code {
+    color: var(--codeblock-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+html:not(.dark) .highlight-wrapper > .copy-button {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.85rem;
+    z-index: 3;
+    visibility: visible;
+    width: auto;
+    padding: 0.34rem 0.78rem;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 0.8rem;
+    background: var(--codeblock-copy-bg);
+    color: var(--codeblock-muted);
+    box-shadow: none;
+    font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    opacity: 1;
+    transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+html:not(.dark) .highlight-wrapper > .copy-button:hover,
+html:not(.dark) .highlight-wrapper > .copy-button:focus,
+html:not(.dark) .highlight-wrapper > .copy-button:active {
+    background: var(--codeblock-copy-hover);
+    border-color: rgba(148, 163, 184, 0.28);
+    color: var(--codeblock-text);
+    transform: none;
+}
+
+html:not(.dark) .highlight-wrapper .chroma .hl {
+    background: linear-gradient(90deg, var(--codeblock-line-highlight) 0%, rgba(226, 232, 240, 0.14) 85%, transparent 100%);
+    border-left: 2px solid rgba(148, 163, 184, 0.34);
+}
+
+html:not(.dark) .highlight-wrapper ::selection {
+    background: rgba(191, 219, 254, 0.38);
+}
+
+html:not(.dark) .highlight-wrapper pre::-webkit-scrollbar {
+    height: 0.45rem;
+}
+
+html:not(.dark) .highlight-wrapper pre::-webkit-scrollbar-track {
+    background: rgba(226, 232, 240, 0.52);
+    border-radius: 999px;
+}
+
+html:not(.dark) .highlight-wrapper pre::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.7);
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+    html:not(.dark) .highlight-wrapper::before {
+        top: 0.75rem;
+        left: 0.85rem;
+    }
+
+    html:not(.dark) .highlight-wrapper > .copy-button {
+        top: 0.7rem;
+        right: 0.75rem;
+        padding: 0.32rem 0.68rem;
+    }
+
+    html:not(.dark) .highlight-wrapper:not(:has(.codeblock-title)) .highlight pre {
+        padding-top: 2.65rem;
+    }
+
+    html:not(.dark) .codeblock-title {
+        padding-left: 4.8rem;
+        padding-right: 4.7rem;
+    }
+}

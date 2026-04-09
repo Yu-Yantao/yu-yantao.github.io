@@ -1,6 +1,7 @@
 {{- $title := or .Attributes.title "" -}}
-{{- $lang := or .Type "text" -}}
-<div class="highlight-wrapper">
+{{- $lang := lower (or .Type "text") -}}
+{{- $label := cond (eq $lang "text") "text" $lang -}}
+<div class="highlight-wrapper" data-lang="{{ $lang }}" data-lang-label="{{ $label }}">
   {{- with $title -}}
     <div class="codeblock-title">
       {{- $title -}}
