@@ -7,13 +7,21 @@ draft: false
 weight:
 slug: 2026-04-09
 tags: [ MacBook, Terminal, Kitty, OhMyZsh, Starship ]
-summary: 记录在 MacBook 上安装并配置 Kitty、Oh My Zsh 和 Starship 的步骤。
-description: MacBook 终端环境搭建记录。
+summary: 整理我在 MacBook 上搭建终端环境的实际配置，包括 Kitty、Oh My Zsh 和 Starship，以及这套组合主要解决什么问题。
+description: 整理我在 MacBook 上搭建终端环境的实际配置，包括 Kitty、Oh My Zsh 和 Starship，以及这套组合主要解决什么问题。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。
 
+## 整体思路
+
+- **Kitty** 负责终端能力本身，例如分屏、标签页和字体渲染
+- **Oh My Zsh** 负责 shell 生态和插件管理
+- **Starship** 负责提示符展示，让 Git、语言运行时等信息更容易读取
+
 ## Kitty
+
+我选择 Kitty，主要是因为它足够轻，同时在键位映射、分屏和外观配置上都比较顺手，比较适合作为长期主力终端。
 
 ### 安装
 
@@ -83,6 +91,8 @@ kitty +kitten themes
 
 ## Oh My Zsh
 
+Shell 层面我没有追求复杂配置，重点是把高频、真正能降低输入成本的能力补上。
+
 ### 安装
 
 先安装 Oh My Zsh：
@@ -126,6 +136,8 @@ source ~/.zshrc
 
 ## Starship
 
+提示符我最终选择了 Starship。它的优点是配置简单、生态成熟，而且跨语言、跨项目时展示信息比较统一。
+
 ### 安装
 
 ```shell
@@ -139,6 +151,7 @@ brew install starship
 ```shell
 starship preset pastel-powerline -o ~/.config/starship.toml
 ```
+
 主题预览
 ![img.png](pastel-powerline.png)
 

@@ -7,8 +7,8 @@ draft: false
 weight:
 slug: 2024-07-25
 tags: [ Docker ]
-summary: 本文主要介绍Docker安装常见应用命令汇总。
-description: 本文主要介绍Docker安装常见应用命令汇总。
+summary: 整理我在 macOS 上通过 Docker 快速拉起常见中间件的命令和目录约定，方便新环境快速起步，也便于后续统一复用。
+description: 整理我在 macOS 上通过 Docker 快速拉起常见中间件的命令和目录约定，方便新环境快速起步，也便于后续统一复用。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。
@@ -182,7 +182,7 @@ docker run -d \
 --network es-net \
 --privileged=true \
 -v /opt/local/Docker/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml \
--p:5601:5601 \
+-p 5601:5601 \
 kibana:8.6.0
 ```
 
@@ -310,7 +310,7 @@ docker cp nginx-test:/etc/nginx/nginx.conf /opt/local/Docker/nginx/conf/nginx.co
 
 # 5.删除临时容器
 docker stop nginx-test
-docker rmi nginx-test
+docker rm nginx-test
 
 # 6.启动容器
 docker run -d \

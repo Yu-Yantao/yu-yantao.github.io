@@ -7,8 +7,8 @@ draft: false
 weight: 1
 slug: 2024-08-02
 tags: [ Notes ]
-summary: 记录一些不错的文章。
-description: 记录一些不错的文章。
+summary: 持续记录一些值得反复阅读的技术文章，以及我认为它们值得收藏的原因。
+description: 持续记录一些值得反复阅读的技术文章，以及我认为它们值得收藏的原因。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。

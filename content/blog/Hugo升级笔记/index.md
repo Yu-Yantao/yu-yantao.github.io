@@ -7,8 +7,8 @@ draft: true
 weight:
 slug: 2025-08-24
 tags: [ Hugo ]
-summary:
-description: 
+summary: 记录博客升级和主题调整时用到的关键改动点，方便后续回看和继续定制。
+description: 记录博客升级和主题调整时用到的关键改动点，方便后续回看和继续定制。
 ---
 
 > 如果文章中有不准确的地方，欢迎留言指正。
