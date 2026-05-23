@@ -20,7 +20,7 @@ showAuthorBottom: false
 ## About Me
 
 - _**Yu Yantao**_
-- _**Backend Engineer**_
+- _**LLM Application Engineer**_
 - _**Graduated in 2022 from [Inner Mongolia Agricultural University](https://www.imau.edu.cn/)**_
 
 ---

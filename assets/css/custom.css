@@ -6,25 +6,101 @@
 
 /*标签云容器*/
 .blog-tags {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    width: 100%;
+    margin-top: 1.25rem;
+}
+
+.blog-tags-cloud {
+    position: relative;
+    min-height: clamp(20rem, 38vw, 32rem);
+    overflow: hidden;
+    isolation: isolate;
 }
 
 /*标签云内容*/
 .blog-tag {
-    flex: 0 0 auto;
-    width: auto;
-    height: auto;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    width: max-content;
+    max-width: 100%;
+    margin: 0;
+    line-height: 1.2;
+    opacity: 1;
+    transition: color 0.16s ease;
+    transform-origin: center;
+    will-change: opacity, transform;
 }
 
-/* 小屏幕设备样式 */
-@media (max-width: 768px) {
+.blog-tags-cloud .blog-tag.is-pending {
+    opacity: 0;
+    transform: scale(0.68);
+}
+
+.blog-tags-cloud .blog-tag.is-visible {
+    animation: tag-spiral-reveal 0.56s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes tag-spiral-reveal {
+    from {
+        opacity: 0;
+        transform: scale(0.68);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.blog-tag a,
+.blog-tag span,
+.blog-tag sup {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.blog-tag-count {
+    margin-left: 0.08em;
+    font-size: 0.52em !important;
+    font-weight: 600;
+    line-height: 1;
+    transform: translateY(-0.18em);
+}
+
+@media (max-width: 767px) {
+    .blog-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .blog-tags-cloud {
+        min-height: 0;
+        overflow: visible;
+    }
+
     .blog-tag {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        opacity: 1;
+        position: static;
+        transform: none !important;
+        transition: color 0.16s ease;
+        animation: none !important;
+        font-size: 1.05rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blog-tag {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: color 0.16s ease;
+        animation: none !important;
     }
 }
 
