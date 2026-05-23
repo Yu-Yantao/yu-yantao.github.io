@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: true
 weight:
 slug: hugo-upgrade-notes
-tags: [ Hugo ]
+tags: [ Notes ]
 summary: 记录博客升级和主题调整时用到的关键改动点，方便后续回看和继续定制。
 description: 记录博客升级和主题调整时用到的关键改动点，方便后续回看和继续定制。
 ---
