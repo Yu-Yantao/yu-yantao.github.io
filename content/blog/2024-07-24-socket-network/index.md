@@ -5,8 +5,8 @@ lastmod: 2024-07-24T18:08:56+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-07-24
-tags: [ Network ]
+slug: socket-network
+tags: [ Networking ]
 summary: 从网络编程角度解释 Socket 是什么、解决了什么问题，以及为什么不能把它简单理解成 IP 和端口的组合。
 description: 从网络编程角度解释 Socket 是什么、解决了什么问题，以及为什么不能把它简单理解成 IP 和端口的组合。
 ---

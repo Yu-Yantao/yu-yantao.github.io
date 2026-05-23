@@ -5,8 +5,8 @@ lastmod: 2026-04-09T19:07:09+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2026-04-09
-tags: [ MacBook, Terminal, Kitty, OhMyZsh, Starship ]
+slug: macbook-terminal
+tags: [ macOS, Terminal ]
 summary: 整理我在 MacBook 上搭建终端环境的实际配置，包括 Kitty、Oh My Zsh 和 Starship，以及这套组合主要解决什么问题。
 description: 整理我在 MacBook 上搭建终端环境的实际配置，包括 Kitty、Oh My Zsh 和 Starship，以及这套组合主要解决什么问题。
 ---

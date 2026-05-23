@@ -5,7 +5,7 @@ lastmod: 2024-07-25T17:02:51+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-07-25
+slug: docker-app-commands
 tags: [ Docker ]
 summary: 整理我在 macOS 上通过 Docker 快速拉起常见中间件的命令和目录约定，方便新环境快速起步，也便于后续统一复用。
 description: 整理我在 macOS 上通过 Docker 快速拉起常见中间件的命令和目录约定，方便新环境快速起步，也便于后续统一复用。

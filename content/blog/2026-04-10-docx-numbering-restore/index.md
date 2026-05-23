@@ -5,8 +5,8 @@ lastmod: 2026-04-10T13:42:00+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2026-04-10
-tags: [ Python, Word, RAG ]
+slug: docx-numbering-restore
+tags: [ Python, Word ]
 summary: 记录一次在文档解析过程中处理 Word 自动编号的经历。本文分析根因、说明实现原理及核心实现。
 description: 记录一次在文档解析过程中处理 Word 自动编号的经历。本文分析根因、说明实现原理及核心实现。
 ---

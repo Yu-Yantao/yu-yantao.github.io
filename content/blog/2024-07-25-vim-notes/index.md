@@ -5,7 +5,7 @@ lastmod: 2024-07-25T18:36:12+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: vim-learn-note
+slug: vim-notes
 tags: [ Vim ]
 summary: 按模式整理一份 Vim 常用命令速查表，适合日常编辑时快速回忆最常用的移动、复制、删除和保存操作。
 description: 按模式整理一份 Vim 常用命令速查表，适合日常编辑时快速回忆最常用的移动、复制、删除和保存操作。

@@ -5,8 +5,8 @@ lastmod: 2024-07-26T18:46:57+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-07-26
-tags: [ MacOS, Docker ]
+slug: macos-docker-mount
+tags: [ macOS, Docker ]
 summary: 记录一次 macOS 下 Docker 目录挂载不生效的排查过程，说明为什么 chmod 和 privileged 都没解决问题，以及最终的处理方式。
 description: 记录一次 macOS 下 Docker 目录挂载不生效的排查过程，说明为什么 chmod 和 privileged 都没解决问题，以及最终的处理方式。
 ---

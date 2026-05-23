@@ -5,8 +5,8 @@ lastmod: 2024-07-18T11:36:15+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-07-18
-tags: [ Java ]
+slug: poi-tl-word-export
+tags: [ Java, Word ]
 summary: 记录在 Java 老项目中用 Poi-tl 导出 Word 的实现过程，重点解决富文本渲染和列表数据导出这两个难点。
 description: 记录在 Java 老项目中用 Poi-tl 导出 Word 的实现过程，重点解决富文本渲染和列表数据导出这两个难点。
 ---

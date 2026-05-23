@@ -5,7 +5,7 @@ lastmod: 2024-08-02T15:53:14+08:00
 author: Yu Yantao
 draft: false
 weight: 1
-slug: 2024-08-02
+slug: progress-ladder
 tags: [ Notes ]
 summary: 持续记录一些值得反复阅读的技术文章，以及我认为它们值得收藏的原因。
 description: 持续记录一些值得反复阅读的技术文章，以及我认为它们值得收藏的原因。

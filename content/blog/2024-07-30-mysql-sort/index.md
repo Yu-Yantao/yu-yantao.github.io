@@ -5,7 +5,7 @@ lastmod: 2024-07-30T13:02:34+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-07-30
+slug: mysql-sort
 tags: [ MySQL ]
 summary: 梳理 MySQL 中索引排序与 filesort 的区别，说明 `Using filesort` 到底意味着什么，以及排序优化时该优先关注什么。
 description: 梳理 MySQL 中索引排序与 filesort 的区别，说明 `Using filesort` 到底意味着什么，以及排序优化时该优先关注什么。

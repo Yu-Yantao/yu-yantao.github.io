@@ -5,7 +5,7 @@ lastmod: 2024-10-25T10:48:34+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-10-25
+slug: mysql-varchar
 tags: [ MySQL ]
 summary: 一次看起来不可能的查询命中，暴露了 MySQL 在 VARCHAR 与数字比较时的隐式转换问题，以及这类 SQL 应该怎么写才更稳妥。
 description: 一次看起来不可能的查询命中，暴露了 MySQL 在 VARCHAR 与数字比较时的隐式转换问题，以及这类 SQL 应该怎么写才更稳妥。

@@ -5,7 +5,7 @@ lastmod: 2025-04-02T11:16:22+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2025-04-02
+slug: fisher-yates-shuffle
 tags: [ Algorithm ]
 summary: 从概率角度解释为什么“随机交换很多次”不等于均匀洗牌，并给出 Fisher-Yates 的正确实现。
 description: 从概率角度解释为什么“随机交换很多次”不等于均匀洗牌，并给出 Fisher-Yates 的正确实现。

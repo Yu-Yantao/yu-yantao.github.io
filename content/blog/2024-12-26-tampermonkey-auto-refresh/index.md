@@ -5,7 +5,7 @@ lastmod: 2024-12-26T17:10:34+08:00
 author: Yu Yantao
 draft: false
 weight:
-slug: 2024-12-26
+slug: tampermonkey-auto-refresh
 tags: [ Tampermonkey ]
 summary: 用一个简单的油猴脚本解决页面长时间不操作后自动退出的问题，并说明脚本里哪些时间参数可以按需调整。
 description: 用一个简单的油猴脚本解决页面长时间不操作后自动退出的问题，并说明脚本里哪些时间参数可以按需调整。
