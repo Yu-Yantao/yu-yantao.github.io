@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: true
 weight:
 slug: blog-writing-guide
-tags: [ Notes ]
+tags: [ ]
 summary: 总结当前博客里常见的表达问题，并沉淀一套以后写技术博客时可以直接复用的写法。
 description: 总结当前博客里常见的表达问题，并沉淀一套以后写技术博客时可以直接复用的写法。
 ---

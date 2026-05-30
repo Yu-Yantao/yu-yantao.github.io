@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const spiralTurns = 2.45;
     const spiralSearchStep = 0.035;
     const spiralMaxXRatio = 0.68;
+    const denseTagThreshold = 15;
+    const fontScalePerExtraTag = 0.04;
+    const minFontScale = 0.86;
     const entranceDelayStep = 95;
     const entranceDelayMax = 1520;
     const entranceStartDelay = 100;
@@ -99,9 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const setDesktopBaseStyle = () => {
+        const extraTagCount = Math.max(tagData.length - denseTagThreshold, 0);
+        const fontScale = Math.max(minFontScale, 1 - extraTagCount * fontScalePerExtraTag);
+
         tagData.forEach(({ tag, count }) => {
             const weight = count / maxCount;
-            const fontSize = 1.05 + weight * 0.45;
+            const fontSize = (1.05 + weight * 0.45) * fontScale;
             tag.style.position = "absolute";
             tag.style.left = "0px";
             tag.style.top = "0px";

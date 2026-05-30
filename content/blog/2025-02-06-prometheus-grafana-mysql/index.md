@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: false
 weight:
 slug: prometheus-grafana-mysql
-tags: [ Observability, MySQL ]
+tags: [ Prometheus, MySQL ]
 summary: 整理一套在 Docker 环境中使用 Prometheus、mysqld_exporter 和 Grafana 监控 MySQL 的实践步骤，以及常见排查思路。
 description: 整理一套在 Docker 环境中使用 Prometheus、mysqld_exporter 和 Grafana 监控 MySQL 的实践步骤，以及常见排查思路。
 ---

@@ -6,7 +6,7 @@ author: Yu Yantao
 draft: false
 weight:
 slug: graphrag
-tags: [ GraphRAG, RAG ]
+tags: [ RAG ]
 summary: 梳理知识图谱、普通 RAG 和 GraphRAG 的基本概念，并总结 GraphRAG 的查询方式和常见接入方式。
 description: 梳理知识图谱、普通 RAG 和 GraphRAG 的基本概念，并总结 GraphRAG 的查询方式和常见接入方式。
 ---

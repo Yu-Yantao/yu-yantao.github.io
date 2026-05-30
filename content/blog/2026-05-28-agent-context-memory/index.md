@@ -97,7 +97,7 @@ coding agent 长任务更依赖中期记忆：
 
 ## 5 长期 Memory 的难点
 
-因为它看起来像 RAG：把内容存起来，query 来了检索一下。
+长期 Memory 看起来像 RAG：把内容存起来，query 来了检索一下。
 但真正难的是写入侧，不是读取侧。
 
 ### 5.1 抽取
@@ -120,7 +120,7 @@ coding agent 长任务更依赖中期记忆：
 | `owner_type`        | 这条 memory 属于谁，例如 `user`、`tenant`、`agent`、`project`         |
 | `owner_id`          | 具体 owner 的 ID，用来做隔离，避免把 A 用户的记忆召回给 B 用户                    |
 | `memory_type`       | memory 类型，常见有 `fact`、`preference`、`decision`、`instruction` |
-| `subject`           | 这条 memory 作用在哪个主题上，这里是代码注释                                 |
+| `subject`           | 这条 memory 作用在哪个主题上                                         |
 | `predicate`         | 关系谓词，类似三元组里的关系；`prefers` 表示“偏好”                            |
 | `object`            | 真正要记住的内容                                                   |
 | `scope`             | 检索范围或使用场景，后续可以用它过滤无关 memory                                |
@@ -230,7 +230,7 @@ Memory 需要遗忘机制。
   "subject": "code_commenting",
   "predicate": "prefers",
   "object": "解释业务规则、边界条件和设计取舍，避免逐行复述代码行为。",
-  "scope": "code_commenting",
+  "scope": "coding_session",
   "confidence": 0.91,
   "source_message_id": "msg_001",
   "created_at": "2026-05-28T10:48:06+08:00",
@@ -247,7 +247,7 @@ Memory 需要遗忘机制。
 检索命中：
 
 ```text
-scope=code_commenting
+scope=coding_session
 memory_type=preference
 subject=code_commenting
 predicate=prefers
@@ -350,9 +350,6 @@ Memory 一旦跨会话保存，就必须认真处理隔离。
 检索时先做权限过滤，再做语义召回。
 不要先全库向量检索再过滤，否则一旦实现里有漏洞，就可能把别人的 memory 当成候选上下文。
 
-这类问题本质上是 Confused Deputy：Agent 拿着系统权限，替用户访问了用户不该访问的信息。
-Agent 越能做事，memory 隔离就越重要。
-
 ## 7 Memory 系统评估
 
 ### 7.1 召回准确率
@@ -424,17 +421,15 @@ Memory 不是免费的。
 目前没有一个所有业务都认可的 memory benchmark。
 公开 benchmark 可以参考，但线上系统通常还是要自己建评测集，尤其是冲突、过期和权限隔离这些场景。
 
-## 8 现成 Memory 方案怎么选
+## 8 主流 Memory 方案
 
-| 方案                | 核心思路                                                                 | 更适合什么                     | 注意点                                  |
-|-------------------|----------------------------------------------------------------------|---------------------------|--------------------------------------|
-| MemGPT / Letta    | 把上下文管理类比成操作系统分页，区分 main context 和 external memory，由 Agent 通过工具决定换入换出 | 长对话、长期助理、需要 Agent 自主管理记忆  | 自主性更强，也更需要约束和可观测性                    |
-| mem0              | 抽取事实和偏好，做去重、实体链接和多信号检索                                               | 想快速接入长期记忆的产品              | 不要只接 SDK，还要设计 owner、scope、过期和 review |
-| Zep / Graphiti    | 用 temporal knowledge graph 表达实体、关系和时间变化                              | 关系复杂、多人多实体、需要时间维度的场景      | 图结构有维护成本，简单偏好不一定值得上图                 |
-| Reflection Memory | 把失败经验、反思、教训存起来，供下一次尝试使用                                              | 编程 Agent、任务型 Agent、反复试错任务 | 反思质量不稳定，最好由测试或反馈信号触发                 |
-| Graph Memory      | 把 memory 组织成实体和关系，而不是孤立文本                                            | 多跳关系、组织知识、客户关系、项目依赖       | 需要实体消歧和关系更新，不适合无结构闲聊                 |
-
-需要补充一点：Zep 和 mem0 同样在解决 Agent 记忆问题，但 Zep 更强调 temporal knowledge graph，把聊天、业务数据、实体和关系放进同一张随时间变化的图里，而不是简单等同于"mem0 加 Graph memory"。
+| 方案类型       | 核心思路                                                   | 代表工具           | 适合什么                        | 注意点                             |
+|------------|--------------------------------------------------------|----------------|-----------------------------|---------------------------------|
+| 抽取式 memory | 从对话抽出结构化事实/偏好，去重后做多信号检索、按需注入                           | Mem0           | 快速给产品接长期记忆，记相对独立的偏好和事实      | 别只接 SDK，owner、scope、过期、冲突还得自己设计 |
+| 虚拟上下文管理    | OS 分页类比，区分 main context 和 external memory，Agent 自主换入换出 | Letta（MemGPT）  | 长对话、长期助理，想让 Agent 自己管理记忆    | 自主性越强，越需要约束和可观测性                |
+| 时序 / 图记忆   | 把实体、关系、时间变化放进一张随时间演进的图                                 | Zep / Graphiti | 多人多实体、关系复杂、需要多跳推理或时间线       | 图要做实体消歧和关系更新，简单偏好不值得上图          |
+| 反思式 memory | 把成功/失败经验蒸馏成可复用的教训，下次少踩坑                                | ReMe           | 编程 Agent、任务型 Agent、反复试错     | 反思质量不稳，最好由测试或反馈信号触发             |
+| 文件式记忆      | 记忆存成结构化文件，让 Agent 直接读文件，而不是向量召回                        | memU           | 长期常驻 Agent，想省 token、记忆可读可审计 | 文件组织和更新要自己管，规模大时检索要分层           |
 
 选择时可以按下面的路径判断：
 
@@ -443,15 +438,17 @@ flowchart TD
 Q["主要问题是什么？"]
 Q --> A["只是单次会话不连贯"]
 Q --> B["跨会话要记住偏好和事实"]
-Q --> C["长任务要暂停、恢复、审批"]
-Q --> D["实体关系复杂，需要多跳推理"]
-Q --> E["Agent 需要从失败中学习"]
+Q --> C["实体关系复杂，需要多跳或时间线"]
+Q --> D["Agent 需要从失败中学习"]
+Q --> E["常驻 Agent，想省 token 且记忆可读"]
+Q --> F["长任务要暂停、恢复、审批"]
 
     A --> A1["短期窗口 + 会话摘要"]
-    B --> B1["抽取式 memory，例如 mem0 或自建 schema"]
-    C --> C1["State checkpoint，例如 LangGraph checkpointer"]
-    D --> D1["Graph memory，例如 Zep / Graphiti 或自建图谱"]
-    E --> E1["Reflection memory + 任务评测反馈"]
+    B --> B1["抽取式 memory，例如 Mem0 或自建 schema"]
+    C --> C1["时序 / 图记忆，例如 Zep / Graphiti 或自建图谱"]
+    D --> D1["反思式 memory，例如 ReMe + 任务评测反馈"]
+    E --> E1["文件式记忆，例如 memU"]
+    F --> F1["这是 State 不是 memory，用 checkpoint，例如 LangGraph checkpointer"]
 
 {{< /mermaid >}}
 
